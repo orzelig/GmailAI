@@ -1,24 +1,29 @@
 {
   "timeZone": "America/Los_Angeles",
-  "dependencies": {
-  },
   "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "urlFetchWhitelist": [
+    "https://api.openai.com/",
+    "https://orzelig.github.io/GmailAI/"
+  ],
   "oauthScopes": [
     "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
     "https://www.googleapis.com/auth/gmail.addons.execute",
     "https://www.googleapis.com/auth/script.external_request"
   ],
-  "runtimeVersion": "V8",
   "gmail": {
     "name": "Gmail Assistant Summarizer",
     "logoUrl": "https://orzelig.github.io/GmailAI/logo.png",
-    "contextualTriggers": [{
-      "unconditional": {
-      },
-      "onTriggerFunction": "loadAddOn"
-    }],
+    "contextualTriggers": [
+      {
+        "unconditional": {},
+        "onTriggerFunction": "loadAddOn"
+      }
+    ],
     "primaryColor": "#00bfff",
-    "openLinkUrlPrefixes": [""],
+    "openLinkUrlPrefixes": [
+      ""
+    ],
     "version": "TRUSTED_TESTER_V2"
   }
 }
